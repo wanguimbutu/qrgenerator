@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-25 10:06:33.201934",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "qr_code",
+  "batch_no",
+  "voucher_type",
+  "voucher_no",
+  "voucher_detail_no",
+  "generated_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Data",
+   "label": "Qr Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch No.",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "voucher_type",
+   "fieldtype": "Link",
+   "label": "Voucher Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "voucher_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Voucher No",
+   "options": "voucher_type"
+  },
+  {
+   "fieldname": "voucher_detail_no",
+   "fieldtype": "Read Only",
+   "label": "Voucher Detail No",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "generated_date",
+   "fieldtype": "Datetime",
+   "label": "Generated Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-25 14:41:57.839513",
+ "modified_by": "Administrator",
+ "module": "QrGenerator",
+ "name": "Generated Qr Code",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
